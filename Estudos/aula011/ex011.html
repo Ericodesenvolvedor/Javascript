@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou não ?</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        #exterior {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #exterior #interior {
+            width: 400px;
+            height: 250px;
+
+            background-color: rgb(59, 13, 133);
+        }
+
+        #interior #inside {
+            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #inside p {
+            margin-bottom: 30px;
+            margin-top: 5px;
+        }
+
+        input[type= submit] {
+            color: black;
+            margin-top: 10px;
+
+            padding: 5px 10px;
+        }
+
+        input[type= text] {
+            color: black;
+            outline: none;
+            height: 20px;
+        }
+
+        #resposta {
+            margin-top: 10px;
+            align-self: flex-start;
+
+            padding-left: 20px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section id="exterior">
+
+        <div id="interior">
+
+            
+            <div id="inside">
+
+                <h1>Recepção hotel</h1>
+                <p>Me ajude a identificar você</p>
+
+                <input type="text" name="nacionalidade" placeholder="Digite seu Pais" id="pais">
+                <input type="submit" value="verificar" onclick="verificar()">
+
+                <div id="resposta">
+                    Status: <span id="respostaspan"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function verificar() {
+
+            var pais = window.document.getElementById ('pais')
+            var pais = (pais.value)
+            var resposta = window.document.getElementById ('respostaspan')
+
+            if (pais == 'Brasil') {
+                resposta.innerText = 'Você é brasileiro'
+            }
+
+            else {
+                resposta.innerText = 'Você é estrangeiro'
+            }
+            
+        }
+
+
+    </script>
+
+</body>
+</html>

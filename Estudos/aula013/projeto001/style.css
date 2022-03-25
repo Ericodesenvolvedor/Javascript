@@ -1,0 +1,47 @@
+body {
+    background-color: #6699FF;
+    font: normal 15pt arial;
+    color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.062);
+
+    margin: auto;
+    width: 400px;
+    padding: 15px 15px 0 15px;
+    color: rgb(46, 53, 88);
+
+}
+
+div {
+    
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+section #fotododia {
+    width: 200px;
+    clip-path: circle();
+}
+
+footer {
+    text-align: center;
+}

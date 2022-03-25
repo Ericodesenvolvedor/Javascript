@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+
+    <style>
+        div {
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Sistema de multas</h1>
+    
+    <form>
+        Velocidade do carro: <input type= "number" name="vel" id="vel"> Km/h
+
+        <input type="submit" value="Consultar" onclick="functionvel()">
+    </form>
+    
+        <div>Resultado:<span id="res"></span></div>
+    
+    <script>
+
+        function functionvel() {
+
+        var vel = window.document.getElementById ('vel')
+        var resultado = window.document.getElementById ('res')
+        var velocidade = Number (vel.value)
+
+        if (velocidade >60) {
+            resultado.innerText = 'você passou do limite de velocidade, multado!'
+            resultado.style.marginLeft = '5px'
+        }
+
+        else {
+            resultado.innerText = 'Tudo certo por aqui'
+        }
+
+        }
+
+    </script>
+
+</body>
+</html>
